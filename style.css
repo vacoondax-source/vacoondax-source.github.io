@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #1e40af;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    background: #e0e7ff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #1e40af;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+/* SERVICES */
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e40af;
+}
+
+.services {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+/* CONTACT FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #e5e7eb;
+    margin-top: 30px;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE DESIGN */
+/* ========================= */
+@media (max-width: 768px) {
+
+    nav a {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
