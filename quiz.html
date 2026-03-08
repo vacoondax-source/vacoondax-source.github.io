@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Quiz App</title>
+
+<style>
+
+body{
+font-family: Arial;
+text-align:center;
+margin-top:50px;
+}
+
+button{
+padding:10px;
+margin:5px;
+font-size:16px;
+cursor:pointer;
+}
+
+#result{
+margin-top:20px;
+font-size:20px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Simple Quiz App</h2>
+
+<h3 id="question">What does HTML stand for?</h3>
+
+<button onclick="checkAnswer('a')">Hyper Text Markup Language</button><br>
+<button onclick="checkAnswer('b')">Home Tool Markup Language</button><br>
+<button onclick="checkAnswer('c')">Hyperlinks Text Management Language</button>
+
+<div id="result"></div>
+
+<script>
+
+function checkAnswer(answer){
+
+if(answer === "a"){
+document.getElementById("result").innerHTML = "Correct Answer 🎉";
+}
+else{
+document.getElementById("result").innerHTML = "Wrong Answer ❌";
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

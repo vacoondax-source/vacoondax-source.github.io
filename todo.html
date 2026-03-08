@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Todo App</title>
+
+<style>
+
+body{
+font-family: Arial;
+text-align:center;
+margin-top:50px;
+}
+
+input{
+padding:10px;
+width:200px;
+}
+
+button{
+padding:10px;
+margin-left:5px;
+}
+
+li{
+margin:10px;
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>Todo App</h2>
+
+<input id="taskInput" placeholder="Enter task">
+<button onclick="addTask()">Add</button>
+
+<ul id="taskList"></ul>
+
+<script>
+
+let tasks = [];
+
+function addTask(){
+
+let input = document.getElementById("taskInput");
+
+let task = input.value;
+
+if(task === "") return;
+
+tasks.push(task);
+
+displayTasks();
+
+input.value = "";
+
+}
+
+function displayTasks(){
+
+let list = document.getElementById("taskList");
+
+list.innerHTML = "";
+
+tasks.forEach(function(task,index){
+
+let li = document.createElement("li");
+
+li.innerText = task;
+
+let btn = document.createElement("button");
+
+btn.innerText = "Delete";
+
+btn.onclick = function(){
+tasks.splice(index,1);
+displayTasks();
+};
+
+li.appendChild(btn);
+
+list.appendChild(li);
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Weather App</title>
+
+<style>
+
+body{
+font-family: Arial;
+text-align:center;
+margin-top:50px;
+}
+
+input{
+padding:10px;
+width:200px;
+}
+
+button{
+padding:10px;
+margin-left:5px;
+cursor:pointer;
+}
+
+#weather{
+margin-top:20px;
+font-size:20px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Weather App</h2>
+
+<input id="cityInput" placeholder="Enter city">
+
+<button onclick="getWeather()">Check Weather</button>
+
+<div id="weather"></div>
+
+<script>
+
+async function getWeather(){
+
+let city = document.getElementById("cityInput").value;
+
+let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=6f2fdc0be8b53bbaa0467233f21e201b`;
+
+try{
+
+let response = await fetch(url);
+
+let data = await response.json();
+
+if(data.cod === "404"){
+document.getElementById("weather").innerHTML = "City not found";
+return;
+}
+
+document.getElementById("weather").innerHTML =
+"Temperature: " + data.main.temp + " °C";
+
+}
+
+catch(error){
+
+document.getElementById("weather").innerHTML =
+"Error getting weather data";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
