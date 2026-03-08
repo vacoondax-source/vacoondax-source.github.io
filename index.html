@@ -1,82 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
+
+<title>Vacoondax Portfolio</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#2d4db7;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:40px;
+}
+
+.hero{
+text-align:center;
+background:#dfe6ff;
+padding:60px;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+}
+
+.services{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+width:250px;
+text-align:center;
+}
+
+.projects{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+button{
+padding:10px 20px;
+background:#2d4db7;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#ddd;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+}
+
+</style>
+
 </head>
+
 <body>
 
 <header>
-    <h1>My Website</h1>
-    <p>Welcome to my first real project</p>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<h1>My Website</h1>
+<p>Welcome to my developer portfolio</p>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Services</a>
+<a href="#">Projects</a>
+<a href="#">Contact</a>
+
+</nav>
+
 </header>
 
-<section class="hero">
-    <div class="hero-text">
-        <h2>Building Simple & Modern Websites</h2>
-        <p>I am learning web development step by step and building real projects.</p>
-        <button>Get Started</button>
-    </div>
+<div class="hero">
+
+<h2>Building Simple & Modern Websites</h2>
+
+<p>I am learning web development and building real projects.</p>
+
+<button>Get Started</button>
+
+</div>
+
+<section class="container">
+
+<h2>About Me</h2>
+
+<p>
+I am learning HTML, CSS and JavaScript and building real projects to become a professional web developer.
+</p>
+
 </section>
 
-<main>
+<section class="container">
 
-    <section id="home" class="card">
-        <h2>Home</h2>
-        <p>This is my first real website project. I am learning web development step by step.</p>
-    </section>
+<h2 style="text-align:center;">My Services</h2>
 
-    <section id="about" class="card">
-        <h2>About Me</h2>
-        <p>I am learning HTML and CSS. This page helps me practice real web development.</p>
-    </section>
+<div class="services">
 
-    <section id="services">
-        <h2 class="section-title">My Services</h2>
+<div class="card">
+<h3>Web Design</h3>
+<p>Creating clean and modern website designs.</p>
+</div>
 
-        <div class="services">
-            <div class="service-card">
-                <h3>Web Design</h3>
-                <p>Creating clean and modern website designs.</p>
-            </div>
+<div class="card">
+<h3>Website Development</h3>
+<p>Building responsive websites using HTML, CSS and JavaScript.</p>
+</div>
 
-            <div class="service-card">
-                <h3>Website Development</h3>
-                <p>Building responsive websites using HTML & CSS.</p>
-            </div>
+<div class="card">
+<h3>Basic IT Support</h3>
+<p>Helping with basic computer and website issues.</p>
+</div>
 
-            <div class="service-card">
-                <h3>Basic IT Support</h3>
-                <p>Helping with basic computer and website issues.</p>
-            </div>
-        </div>
-    </section>
+</div>
 
-    <!-- CONTACT FORM -->
-    <section id="contact" class="card">
-        <h2>Contact Me</h2>
+</section>
 
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+<section class="container">
 
-</main>
+<h2 style="text-align:center;">My Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>Calculator App</h3>
+<a href="calculator/calculator.html" target="_blank">
+<button>Open App</button>
+</a>
+</div>
+
+<div class="card">
+<h3>Todo App</h3>
+<a href="todo-app/todo.html" target="_blank">
+<button>Open App</button>
+</a>
+</div>
+
+<div class="card">
+<h3>Notes App</h3>
+<a href="notes-app/notes.html" target="_blank">
+<button>Open App</button>
+</a>
+</div>
+
+<div class="card">
+<h3>Weather App</h3>
+<a href="weather-app/weather.html" target="_blank">
+<button>Open App</button>
+</a>
+</div>
+
+<div class="card">
+<h3>Quiz App</h3>
+<a href="quiz-app/quiz.html" target="_blank">
+<button>Open App</button>
+</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="container">
+
+<h2>Contact Me</h2>
+
+<input placeholder="Your Name">
+<input placeholder="Your Email">
+
+<textarea placeholder="Your Message"></textarea>
+
+<br><br>
+
+<button>Send Message</button>
+
+</section>
 
 <footer>
-    <p>© 2026 My Website. All rights reserved.</p>
+
+<p>© 2026 Vacoondax Portfolio</p>
+
 </footer>
 
 </body>
+
 </html>
